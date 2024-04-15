@@ -38,11 +38,13 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+		<!--  
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -54,11 +56,33 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-rest</artifactId>
 		</dependency>
-		<!-- Esta es la librería que proviene de nuestro proyecto "commons" de usuarios-->
+		<!-- Esta es la librería que proviene de nuestro proyecto "commons" de
+		usuarios-->
 		<dependency>
 			<groupId>com.formacionbdi.springboot.app.usuarios.commons</groupId>
 			<artifactId>springboot-servicio-usuarios-commons</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- Dependencia agregada manualmente para el uso de PostgeSQL -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>			
+		</dependency>
+		<!-- Dependencia agregada manualmente, de config client. Para indicar que este microservicio items, 
+		sera un cliente del servidor de configuraciones -->
+		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-config</artifactId>		    
+		</dependency>
+		<!-- Dependencia agregada maualmente conocida como "Bootstrap". 
+		La cual usaremos mas adelante cuando trabajemos con el servidor de configuraciones "Spring Cloud Config".
+		Tambien sera necerio para habilitar un archivo llamado "bootstrap.properties" -->
+		<!--
+		https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-bootstrap -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bootstrap</artifactId>			
 		</dependency>
 	</dependencies>
 	<dependencyManagement>
